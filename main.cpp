@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <ctime>
 #include <stdio.h>
 #include <stdlib.h>
 #include <opencv2/opencv.hpp>
@@ -39,6 +40,11 @@ void onmouse(int event, int x, int y, int flags, void *params)
 
   // draw rectangle on buffer image and display on window
   imshow(windowName, buffer_image);
+
+  // timestamp generation for image filename
+  std::time_t now = std::time(NULL);
+  std::tm *ptm = std::localtime(&now);
+  char buffer[32];
 
   switch(event)
   {
