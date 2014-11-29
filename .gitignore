@@ -1,0 +1,12 @@
+# ignore auto-generated files by the CMake build-system
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# ignore binary
+patchselector
+
+# ignore vim swp files
+*.swp
